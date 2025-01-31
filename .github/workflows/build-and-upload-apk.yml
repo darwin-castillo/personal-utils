@@ -3,7 +3,7 @@ name: Build and Upload APK
 on:
   push:
     branches:
-      - main  # Cambia a la rama que desees
+      - master  # Cambia a la rama que desees
 
 jobs:
   build:
