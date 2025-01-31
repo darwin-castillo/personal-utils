@@ -23,6 +23,14 @@ jobs:
 
       - name: Build APK
         run: flutter build apk --release
+        
+      - name: Upload to gdrive
+        uses: adityak74/google-drive-upload-git-action@main
+        with:
+          credentials: 'MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCdMGHEgKysQjCRzWx4T1zwvHxyc97m4XGj0hz+XZeH2gMrIHtKAVpR9GZpp+76xw5yicQqR8398GLdm6luTYLuUp6QS6AyB3FYrMHvPnyAEGIgP3Nii/DS2pvoWVF/iGWvxDhTqDQEY4lIFWlcaD/EGEKL5Hk1KulKpuYTxuUt8c58dtf3IjVn2OrsJGLmwnN6KxipuMqi/MiZW3MSMv2gpMpjf4vG7Evh6kf1KyfVJpK2n9XIg9QGhSPzdEkE0YvX+mjVzlrBAMK/RVcgxeZtQ2mBS5waVOAgkjHo1opRctplbOF39gWjNM6Y9EISwGboAgIvbhtS83tayRlqGx2fAgMBAAECggEALKBFwXH+k9Ee1OYLO4TckAQTGLNIvyeWCbpnPNf5YzpD2ASavAHyUH4gbTKeKFhHA8GVDaPhGY0bpGrDCWu8FkkidzjhPBLc3R3+2RtWYU1Fbn5VFc9BCbvCs45YEur4Y5RDoYyJaA2SNgLOLMvz/oocqnas6qlKHkWP4GGBQy+G1tJQ5pxYORj6gapCIuUWKH/8y73yxY0ST/i/qHsoAhAEGXNivUE85E+IZDlzoZlshWaWU4G4308FFIKE0ULH0JHOU2WzFUBmMd4WBwRR46ZJmXA+sITawfy6QYNO45DGEN4slCH5aj6ir4mrYeWGtKGEiV71sbYDaPJnngEZMQKBgQDcSh3CwHLI2BDzhMRf/YfY/FM+xEDp4CzzWchJX4sqsjQ61XE17byYQZ5e8eki+YMOggb6NOAvtulQPmVSCmVmB8WNXj06cdgFRvXwk0JZoLYPbGRsJmbRpgLKDzrtQGoDdsCPdVzejVkTfgtcLpNiPggqL9t00XZ88c0KptV5VQKBgQC2q6Gm035D8+cRNPOX2aMMHn3EU3KPV5OK/YtobAh8674asXqPoJwQx+ObeGd5FF3IvdBrmssR5qgRMF9FhINpw6LOknOey+C7rXiYs/OlWHOF1swNhG7n4w2Zkl6n13GpJbSxhVswN+W8ENxdWlpqJfEFnGenExABzyJMyGFrIwKBgFoJKPTKd5/DP9poL2MUWovDRbrnt6hfab/kuEnU9Sp0P4i0aFskWerZFwOzWBhlZr1tQ7DMH70gw2d6uSq4+QykrIfFNr1GfoZZpHe5mGrNltvi74CMiYWyln1DkFAb/biAtt9rlpOXrgqbf8UjfDWxKOElQksSuZ0Dr0xlN+cpAoGAHXV2X1oSLdFCvWKluiJuCgFM1QGEIxvDfpG/DrsFb2fxQ4rFsi37nTUvPp5fSYaATWRXHVNcVmm1RvhfFO3253KWaevyW3STrJCgNzgmHc8y6i2mwLNP03OpeM/DFhxHhzi+eDaCazdIhFjPwPpWRHIT+YyspqQLW89Uv788/rMCgYBOR9LtRdXL6BET9M8v/bzf78W06TljjZm7OZZw+a1jgZP8K9vp4hridNkighUXLvYxsXWPOYZ1fUCq2n2qyRYEq3Noqr44y3xjURYz10bQ3YSg0Hv51Ojl+g3gsReUMTvDJ2dLY3w6elXBosDVIOg4vV0ieSVDLrnNQygu51FIAw=='
+          filename:  'build/app/outputs/apk/release/app-release.apk'
+          folderId: '1WOjjbkd-OTXb0CreWV9A9cc8e2-PvTvv'
+
 
       - name: Upload google drive
         uses: willo32/google-drive-upload-action@v1
