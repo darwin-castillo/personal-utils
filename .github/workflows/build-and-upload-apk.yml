@@ -30,11 +30,3 @@ jobs:
           credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}
           filename:  'build/app/outputs/apk/release/app-release.apk'
           folderId: '1WOjjbkd-OTXb0CreWV9A9cc8e2-PvTvv'
-         
-      - name: Upload APK to Google Drive
-        uses: satackey/action-upload-google-drive@v1
-        with:
-          folder-id: '1WOjjbkd-OTXb0CreWV9A9cc8e2-PvTvv'  # Reemplaza con el ID de la carpeta en Google Drive
-          credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}  # Credenciales de Google Drive
-          file-path: 'build/app/outputs/apk/release/app-release.apk'
-          file-name: 'app-release.apk'
